@@ -103,4 +103,11 @@ Route::get('/inicio', function () {
     return view('homess');
 })->middleware('auth');
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware('auth');
+Route::get('/profile', function () {
+    return view('profile');
+})->middleware('auth');
+
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
