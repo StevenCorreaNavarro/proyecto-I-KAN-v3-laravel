@@ -1,0 +1,29 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+body
+{
+    background-color: aqua;
+    background-image: url(/public/img/login2.png);
+    background-size: cover;
+    
+}
+.nav-item{
+    border-radius: 10px;
+    width: 200px;
+    margin: 2%;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+  
+}
+.w{
+    align-content: center;
+    height: 300px;
+}
