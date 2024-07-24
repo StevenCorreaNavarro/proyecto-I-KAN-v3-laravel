@@ -7,7 +7,9 @@
     <title>Profile</title>
 </head>
 <body>
-    <h1>Profile Page</h1>
-    <p>Welcome, {{ Auth::user()->name }}!</p>
+    <h1>Perfil</h1>
+    <h3>Welcome</h3>
+    <p> {{ Auth::user()->name }}!</p>
+    <p>correo electronico {{ Auth::user()->email }}</p>
 </body>
 </html>

@@ -54,13 +54,17 @@
                                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
                                     </a>
+                                    
 
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a href="profile" class="dropdown-item" >perfil</a>
+                                        <a href="" class="dropdown-item">otra parte</a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                                             {{ __('cerrar sesion') }}
                                         </a>
+                                        
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                             class="d-none">

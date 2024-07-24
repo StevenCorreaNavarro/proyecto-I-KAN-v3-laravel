@@ -95,7 +95,7 @@ Route::get('curso/{curso}/editar',[CursoController::class,'edit'])->name('curso.
 use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
-Route::get('/hom', [HomeController::class,'index'])->middleware('auth');
+Route::get('/ing', [HomeController::class,'index'])->middleware('auth');
 Route::get('/ingreso', [HomeController::class,'entrar'])->middleware('auth');
 // Route::get('/home', [HomeController::class,'index'])->middleware('auth');
 
@@ -106,6 +106,7 @@ Route::get('/inicio', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
+
 Route::get('/profile', function () {
     return view('profile');
 })->middleware('auth');
