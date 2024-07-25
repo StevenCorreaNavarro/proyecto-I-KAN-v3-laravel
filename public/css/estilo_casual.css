@@ -46,6 +46,11 @@ header.down {
     transform: scale(1.1);
     /* Hace que el botón se haga más grande al 110% */
 }
+header.down {
+    top: -100px;
+    /* desplazar el header hacia arriba */
+}
+
 header {
     background: linear-gradient(#d9d9d9d8, #c7c7c7d8);
     width: 100%;
@@ -74,6 +79,14 @@ header .logo {
     font-size: 30px;
     text-transform: uppercase;
 
+
+}
+.botone {
+    display: flex;
+    margin: 0;
+    padding: 0%;
+    
+  
 
 }
 
@@ -128,6 +141,8 @@ header nav {
 
 header nav ul {
     display: flex;
+    padding: 0%;
+    margin: 0%;
 
 
 }
