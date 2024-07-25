@@ -53,6 +53,8 @@ Route::get('tiendas_oficiales',[UsuarioController::class,'tiendas'])->name('tien
 Route::get('unidad/listar',[UnitController::class,'listardos'])->name('unit.listardos');
 Route::post('unidad/storedos', [UnitController::class,'storedos'])->name('unit.storedos');
 
+Route::get('prueba',[UnitController::class,'prueba'])->name('prueba.prueba'); 
+
 Route::get('tiendas_oficiales',[UnitController::class,'listar'])->name('unit.listar');  
 Route::get('unidad/create',[UnitController::class,'create'])->name('unit.create');
 Route::post('unidad/store', [UnitController::class,'store'])->name('unit.store');
@@ -97,18 +99,26 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 Route::get('/ing', [HomeController::class,'index'])->middleware('auth');
 Route::get('/ingreso', [HomeController::class,'entrar'])->middleware('auth');
-// Route::get('/home', [HomeController::class,'index'])->middleware('auth');
+// Route::get('/prueba', [HomeController::class,'prueba'])->middleware('auth');
 
 Route::get('/inicio', function () {
     return view('homess');
 })->middleware('auth');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('ocasion');
 })->middleware('auth');
 
 Route::get('/profile', function () {
     return view('profile');
 })->middleware('auth');
 
+// Route::get('/prueba', function () {
+//     return view('prueba');
+// })->middleware('auth');
+
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
+// routes/web.php
+Route::get('/mivista', function () {
+    return view('prueba'); // Aquí 'mi_vista' se refiere a 'resources/views/mi_vista.blade.php'
+});

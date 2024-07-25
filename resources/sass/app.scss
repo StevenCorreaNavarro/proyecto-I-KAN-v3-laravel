@@ -1,29 +1,35 @@
-// Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
+// // Fonts
+// @import url('https://fonts.bunny.net/css?family=Nunito');
 
 // Variables
-@import 'variables';
+// @import 'variables';
 
 // Bootstrap
-@import 'bootstrap/scss/bootstrap';
+// @import 'bootstrap/scss/bootstrap';
 
 body
 {
-    background-color: aqua;
-    background-image: url(/public/img/login2.png);
-    background-size: cover;
+    background-color: rgb(20, 71, 71);
+    // background-image: url(/public/img/login2.png);
+    // background-size: cover;
     
 }
-.nav-item{
-    border-radius: 10px;
-    width: 200px;
-    margin: 2%;
-    background-color: white;
-    text-align: center;
-    font-size: 20px;
+// .nav-item{
+//     border-radius: 10px;
+//     width: 200px;
+//     margin: 2%;
+//     // background-color: white;
+//     text-align: center;
+//     font-size: 20px;
   
-}
-.w{
+// }
+.w,button{
     align-content: center;
-    height: 300px;
+    width:  300px;
+}
+.s{width: 10%;}
+header ul,button {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 }

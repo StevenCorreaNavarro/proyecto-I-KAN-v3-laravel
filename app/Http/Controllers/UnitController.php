@@ -58,6 +58,12 @@ class UnitController extends Controller
         return redirect()->route('unit.listar');
     }
 
+    // public function prueba()
+    // { // crear formulario
+    //     //return view('usuario.create');
+    //     return view('layouts.layout');
+    // }
+
     public function show(Unit $unit)
     { //$id
         // $curso=Curso::find($id);

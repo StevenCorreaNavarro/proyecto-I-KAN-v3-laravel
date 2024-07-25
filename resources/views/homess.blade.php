@@ -17,109 +17,17 @@
 </head>
 
 <body>
-    
+    @extends('layouts.app')
+
+
     <div class="imagencentrado">
-        <img src="/" alt="">
+        
         <!-- <img src="/img/logo I KAN blanco.png" alt="">  -->
-        <a href="ocasion">DISEÑA TU OUTFIT</a>
+        <a href="login">DISEÑA TU OUTFIT</a>
     </div>
     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, fugiat ab iusto, doloribus sapiente dignissimos obcaecati rerum, aliquid illo enim tenetur delectus. Cumque impedit voluptates corporis, cupiditate molestias nisi debitis.</p> -->
 
-    <header>
-        <div class="logo">
-            <img src=" {{ asset('img/IMG HOME/IMG HEADER - SUBMENU HEADER/LOGOS/NEGRO.png') }} "alt="">
-        </div>
-        <input type="checkbox" id="nav_check" hidden>
-        <nav>
-            <ul>
-                <li>
-                    <a href="home" class="active">Inicio</a>
-                </li>
-                <li>
-                    <a href="ocasion" class="">Diseñar Outfit</a>
-                </li>
-                <li>
-                    <a href="estilo">Estilos</a>
 
-                </li>
-                <li>
-                    <a href="tiendas_oficiales">Tiendas</a>
-                </li>
-                <li>
-                    <a href="#" id="form-open2">Contactos</a>
-                    <!-- <button class="button" id="form-open2">contactos</button> -->
-                </li>
-            </ul>
-        </nav>
-        
-        <section class="homes">
-            <div class="form_container">
-                <i class="uil uil-times form_closed">X</i>
-                <!-- imagen del inicio de secion  -->
-                <div>
-                    <img src="/img/qr.png" alt="">
-                </div>
-               
-                
-            </div>
-            
-        </section>
-        <div style="width: 20%">
-
-        </div>
-
-
-        {{-- <input type="search" class="search-box" placeholder="Buscar..."> --}}
-        
-
-
-
-
-        <div class="iniciarr">
-            @if (Route::has('login'))
-                <nav class="-mx-3 flex flex-1 justify-end">
-                    @auth
-                        <a href="hom">
-
-                            <button>{{ Auth::user()->name }}!</button>
-                        </a>
-                    @else
-                        <a href="{{ route('login') }}"
-                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                            <button>Log in</button>
-                        </a>
-
-                        @if (Route::has('register'))
-                            {{-- <a href="{{ route('register') }}"
-                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                <button>Register</button>
-                            </a> --}}
-                        @endif
-                    @endauth
-                </nav>
-            @endif
-        </div>
-
-       
-
-
-        <!-- ********************************************************************************* -->
-        <section class="contac">
-            <div class="form_container">
-                <img src="/img/mujer elegante fondo.jpg" alt="">
-            </div>
-        </section>
-
-        <section class="homes">
-            <div class="form_container">
-                <i class="uil uil-times form_closed"></i>
-                <!-- imagen del inicio de secion  -->
-                <div>
-                    <img src="/img/qr.png" alt="">
-                </div>
-            </div>
-        </section>
-    </header>
 
     <script>
         let submenu = document.getElementById("submenu");
@@ -128,344 +36,320 @@
             submenu.classList.toggle("open-menu");
         }
     </script>
+    <div class="cuerpo">
 
 
 
-    <main>
+        <div class="slider">
+            <figure>
+                <div class="slide">
+                    <a href="https://www.kancanjeanscolombia.com/nueva-coleccion"><img src="/img//IMG HOME/propaganda.jpg"
+                            alt="estilo1"></a>
+                </div>
+                <div class="slide">
+                    <a href=""><img src="/img/IMG OCASIONES/carrusel.jpg" alt="estilo2"></a>
+                </div>
+                <!-- <div class="slide">
+                    <a href="https://kancanjeans.myvtex.com/_v/segment/admin-login/v1/login?returnUrl=%2FZapatos%3F"><img
+                            src="/img/ropa3.webp" alt="estilo3"></a>
+                </div>
+                <div class="slide">
+                    <a href="https://kancanjeans.myvtex.com/_v/segment/admin-login/v1/login?returnUrl=%2FZapatos%3F"><img
+                            src="/img/ropaa1.webp" alt="estilo4"></a>
+                </div> -->
+            </figure>
+        </div>
+        <script src="i kan.js"></script>
 
-        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+
+
+
+
+        <div class="tendencias">
+            <h2>TENDENCIAS</h2>
+        </div>
+
+        <div class="contenedor">
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/1.jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/IMG HOME/originals/propaganda2.jpg" class="d-block w-100" alt="Slide 1">
-                    <div class="container">
-                        <div class="carousel-caption text-start">
-                            <!-- <h1>Example headline.</h1>
-                    <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-                    p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/2 (3).jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/3.jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/4.jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/5.jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/6.jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/7.jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/8.jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/9.jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/10.jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/11.jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/img/IMG HOME/GALERIA IMG1/12.jpg" alt="">
+                <div class="overlays">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <div class="Carousel">
+            <h2>Subcategory</h2>
+            <div class="slick-list" id="slick-list">
+                <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev"
+                    onclick="app.processingButton(event)">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                        class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                        </path>
+                    </svg>
+                </button>
+                <div class="slick-track" id="track">
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/1.1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/2.2.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/3.3.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/4.4.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/5.5.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/6.6.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/7.7 (2).jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/8.8.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/9.9.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/10.1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/11.1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/12.1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/13.1 (2).jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/14.1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="/img/IMG HOME/imagenes Carrusel 2/15.1.jpg" alt="Image">
+                                </picture>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="/img/IMG HOME/SLIDER 1.jpg" class="d-block w-100" alt="Slide 2">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <!-- <h1>Another example headline.</h1>
-                      <p>Some representative placeholder content for the second slide of the carousel.</p>
-                      <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>-->
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/IMG HOME/SLIDER 2.jpg" class="d-block w-100" alt="Slide 3">
-                    <div class="container">
-                        <div class="carousel-caption text-end">
-                            <!-- <h1>One more for good measure.</h1>
-                      <p>Some representative placeholder content for the third slide of this carousel.</p>
-                      <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>-->
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </main>
-
-    <div class="tendencias">
-        <h2>TENDENCIAS</h2>
-    </div>
-
-    <div class="contenedor">
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/1.jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
+                <button class="slick-arrow slick-next" id="button-next" data-button="button-next"
+                    onclick="app.processingButton(event)">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                        class="svg-inline--fa fa-chevron-right fa-w-10" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                        </path>
+                    </svg>
+                </button>
             </div>
         </div>
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/2 (3).jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
+        <br>>
+        <div class="Carousel">
+            <h2>Subcategory</h2>
         </div>
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/3.jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
-        </div>
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/4.jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
-        </div>
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/5.jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
-        </div>
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/6.jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
-        </div>
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/7.jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
-        </div>
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/8.jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
-        </div>
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/9.jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
-        </div>
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/10.jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
-        </div>
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/11.jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
-        </div>
-        <div class="box">
-            <img src="/img/IMG HOME/GALERIA IMG1/12.jpg" alt="">
-            <div class="overlays">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
-        </div>
-
-    </div>
-    <br>
-    <div class="Carousel">
-        <h2>Subcategory</h2>
-        <div class="slick-list" id="slick-list">
-            <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev"
-                onclick="app.processingButton(event)">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
-                    class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 320 512">
-                    <path fill="currentColor"
-                        d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
-                    </path>
-                </svg>
-            </button>
-            <div class="slick-track" id="track">
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/1.1.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/2.2.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/3.3.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/4.4.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/5.5.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/6.6.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/7.7 (2).jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/8.8.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/9.9.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/10.1.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/11.1.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/12.1.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/13.1 (2).jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/14.1.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="slick">
-                    <div>
-                        <a href="/">
-                            <h4><small>Share Your Message</small>Watch</h4>
-                            <picture>
-                                <img src="/img/IMG HOME/imagenes Carrusel 2/15.1.jpg" alt="Image">
-                            </picture>
-                        </a>
-                    </div>
+        <div class="contenedorr">
+            <div class="box">
+                <img src="/img/IMG HOME/13.jpg" alt="">
+                <div class="overlay">
+                    <p>Texto para la primera imagen</p>
                 </div>
             </div>
-            <button class="slick-arrow slick-next" id="button-next" data-button="button-next"
-                onclick="app.processingButton(event)">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
-                    class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 320 512">
-                    <path fill="currentColor"
-                        d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
-                    </path>
-                </svg>
-            </button>
-        </div>
-    </div>
-    <br>>
-    <div class="Carousel">
-        <h2>Subcategory</h2>
-    </div>
-    <div class="contenedorr">
-        <div class="box">
-            <img src="/img/IMG HOME/13.jpg" alt="">
-            <div class="overlay">
-                <p>Texto para la primera imagen</p>
+            <div class="box">
+                <img src="/img/IMG HOME/14.jpg" alt="">
+                <div class="overlay">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
             </div>
-        </div>
-        <div class="box">
-            <img src="/img/IMG HOME/14.jpg" alt="">
-            <div class="overlay">
-                <p>Texto de overlay para la primera imagen</p>
+            <div class="box">
+                <img src="/img/IMG HOME/15.jpg" alt="">
+                <div class="overlay">
+                    <p>Texto de overlay para la primera imagen</p>
+                </div>
             </div>
-        </div>
-        <div class="box">
-            <img src="/img/IMG HOME/15.jpg" alt="">
-            <div class="overlay">
-                <p>Texto de overlay para la primera imagen</p>
-            </div>
-        </div>
 
 
+        </div>
     </div>
     <div class="regis">
         <marquee>Registrate <button>Registrate Gratis</button></marquee>
@@ -612,7 +496,8 @@
     <script></script>
     {{-- <script src="/1.Home_login.js"></script> --}}
     <script src="{{ asset('js/home_login.js') }}"></script>
-    <!-- <script src="/1.contactos.js"></script> -->
+    <script src="{{ asset('js/1.contactos.js') }}"></script>
+    {{-- <script src="/1.contactos.js"></script> --}}
 </body>
 
 </html>

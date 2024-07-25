@@ -12,7 +12,126 @@
 </head>
 
 <body>
-    @extends('layouts.app')
+
+    <header>
+
+        <div class="logo">
+            <img src=" {{ asset('img/IMG HOME/IMG HEADER - SUBMENU HEADER/LOGOS/NEGRO.png') }} "alt="">
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a href="home" class="">Inicio</a>
+                </li>
+                <li>
+                    <a href="ocasion" class="active">Diseñar Outfit</a>
+                </li>
+                <li>
+                    <a href="estilo">Estilos</a>
+                </li>
+                <li>
+                    <a href="tiendas_oficiales">Tiendas</a>
+                </li>
+                <li>
+                    <a href="#" id="form-open2">Contactos</a>
+                    <!-- <button class="button" id="form-open2">contactos</button> -->
+                </li>
+            </ul>
+        </nav>
+        <section class="homes">
+            <div class="form_container">
+                <i class="uil uil-times form_closed">X</i>
+                <!-- imagen del inicio de secion  -->
+                
+                <div>
+                    <img src="/img/qr.png" alt="" height="10">
+                </div>
+            </div>
+        </section>
+        <div class="iniciarr">
+            @if (Route::has('login'))
+                <nav class="-mx-3 flex flex-1 justify-end">
+                    @auth
+                        <a href="hom">
+
+                            <button>{{ Auth::user()->name }}!</button>
+                        </a>
+                    @else
+                        <a href="{{ route('login') }}"
+                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                            <button>Log in</button>
+                        </a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}"
+                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                <button>Register</button>
+                            </a>
+                        @endif
+                    @endauth
+                </nav>
+            @endif
+        </div>
+        
+
+
+
+        <div class="user-icon">
+            
+
+            {{-- <img src="/IMG HEADER - SUBMENU HEADER/FOTO PERFIL.png" class="user-pic" onclick="toggleMenu()"> --}}
+            <div class="submenus" id="submenu">
+                <div class="submenu">
+                    <div class="info">
+                        <img src="/IMG HEADER - SUBMENU HEADER/FOTO PERFIL.png" alt="">
+                        <h2>Jack Steven Correa</h2>
+
+                    </div>
+                    <hr>
+                    <a href="" class="submenu-links">
+                        <img src="/IMG HEADER - SUBMENU HEADER/usuario.png">
+                        <p>Mi cuenta</p>
+                        <span>></span>
+                    </a>
+                    <a href="" class="submenu-links">
+                        <img src="/IMG HEADER - SUBMENU HEADER/hogar.png">
+                        <p>Inicio</p>
+                        <span>></span>
+                    </a>
+                    <a href="" class="submenu-links">
+                        <img src="/IMG HEADER - SUBMENU HEADER/favorito (3).png">
+                        <p>Favoritos</p>
+                        <span>></span>
+                    </a>
+                    <a href="" class="submenu-links">
+                        <img src="/IMG HEADER - SUBMENU HEADER/tienda.png">
+                        <p>Tiendas Oficiales</p>
+                        <span>></span>
+                    </a>
+                    <a href="" class="submenu-links">
+                        <img src="/IMG HEADER - SUBMENU HEADER/boton-web-de-ayuda.png">
+                        <p>Ayuda/PQR</p>
+                        <span>></span>
+                    </a>
+                    <a href="" class="submenu-links">
+                        <img src="/IMG HEADER - SUBMENU HEADER/cerrar-sesion.png">
+                        <p>Salir</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        
+    </header>
 
     <script>
         let submenu = document.getElementById("submenu");
