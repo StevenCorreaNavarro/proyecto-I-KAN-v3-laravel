@@ -2,134 +2,21 @@
 <html lang="en">
 
 <head>
+    
+    <link rel="stylesheet" href="{{ asset('css/tiendas.css') }}"><!-- llamado de la seccion de estilos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ asset('css/tiendas.css') }}"><!-- llamado de la seccion de estilos -->
-    <link rel="shortcut icon" href="/img/logo I KAN blanco.png" type="image/x-icon">
+    {{-- <link rel="stylesheet" href="{{ asset('css/ocasion.css') }}"> --}}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     <title>I KAN</title>
 </head>
 
 <body>
 
-    <header>
-
-        <div class="logo">
-            <img src=" {{ asset('img/IMG HOME/IMG HEADER - SUBMENU HEADER/LOGOS/NEGRO.png') }} "alt="">
-        </div>
-        <input type="checkbox" id="nav_check" hidden>
-        <nav>
-            <ul>
-                <li>
-                    <a href="{{ route('home.home') }}" class="">Inicio</a>
-                </li>
-                <li>
-                    <a href="ocasion" class="">Diseñar Outfit</a>
-                </li>
-                <li>
-                    <a href="estilo">Estilos</a>
-                </li>
-                <li>
-                    <a href="tiendas_oficiales">Tiendas</a>
-                </li>
-                <li>
-                    <a href="#" id="form-open2">Contactos</a>
-                    <!-- <button class="button" id="form-open2">contactos</button> -->
-                </li>
-            </ul>
-        </nav>
-        <section class="homes">
-            <div class="form_container">
-                <i class="uil uil-times form_closed">X</i>
-                <!-- imagen del inicio de secion  -->
-                <div>
-                    <img src="/img/qr.png" alt="">
-                </div>
+    @extends('layouts.app')
 
 
-            </div>
-
-        </section>
-        <div class="iniciarr">
-            @if (Route::has('login'))
-                <nav class="-mx-3 flex flex-1 justify-end">
-                    @auth
-                        <a href="hom">
-
-                            <button>{{ Auth::user()->name }}!</button>
-                        </a>
-                    @else
-                        <a href="{{ route('login') }}"
-                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                            <button>Log in</button>
-                        </a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}"
-                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                <button>Register</button>
-                            </a>
-                        @endif
-                    @endauth
-                </nav>
-            @endif
-        </div>
-
-
-
-
-        <div class="user-icon">
-
-            {{-- <img src="/IMG HEADER - SUBMENU HEADER/FOTO PERFIL.png" class="user-pic" onclick="toggleMenu()"> --}}
-            <div class="submenus" id="submenu">
-                <div class="submenu">
-                    <div class="info">
-                        <img src="/IMG HEADER - SUBMENU HEADER/FOTO PERFIL.png" alt="">
-                        <h2>Jack Steven Correa</h2>
-
-                    </div>
-                    <hr>
-                    <a href="" class="submenu-links">
-                        <img src="/IMG HEADER - SUBMENU HEADER/usuario.png">
-                        <p>Mi cuenta</p>
-                        <span>></span>
-                    </a>
-                    <a href="" class="submenu-links">
-                        <img src="/IMG HEADER - SUBMENU HEADER/hogar.png">
-                        <p>Inicio</p>
-                        <span>></span>
-                    </a>
-                    <a href="" class="submenu-links">
-                        <img src="/IMG HEADER - SUBMENU HEADER/favorito (3).png">
-                        <p>Favoritos</p>
-                        <span>></span>
-                    </a>
-                    <a href="" class="submenu-links">
-                        <img src="/IMG HEADER - SUBMENU HEADER/tienda.png">
-                        <p>Tiendas Oficiales</p>
-                        <span>></span>
-                    </a>
-                    <a href="" class="submenu-links">
-                        <img src="/IMG HEADER - SUBMENU HEADER/boton-web-de-ayuda.png">
-                        <p>Ayuda/PQR</p>
-                        <span>></span>
-                    </a>
-                    <a href="" class="submenu-links">
-                        <img src="/IMG HEADER - SUBMENU HEADER/cerrar-sesion.png">
-                        <p>Salir</p>
-                        <span>></span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <label for="nav_check" class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </label>
-    </header>
 
     <script>
         let submenu = document.getElementById("submenu");
@@ -149,29 +36,34 @@
 
 
     <div>
-        <table class="table">
+        <table class="">
             @foreach ($units as $unit)
-                <div class="cuer">
-                    <div class="cuero">
-                        <div class="tx" style="background-color: rgba(255, 255, 255, 0.496)">
+                <div class="tablauno">
+                    <div class="tablados">
+                        <div class="tablatres" style="background-color: rgba(255, 255, 255, 0.496)">
                             <center>
-                                <div>
+                                <div class="tablaimg">
                                     {{-- en esta parte es para visualizar la imagen subida --}}
                                     @if ($unit->image)
-                                        <img src="{{ asset('images/' . $unit->image) }}" alt="" width="150">
+                                        <img src="{{ asset('images/' . $unit->image) }}" alt="" >
                                     @endif
-                                    <h1>{{ $unit->nombre }}</h1>
                                     <br>
+                                    <br>
+                                    <h1>{{ $unit->nombre }}</h1>
+                                    
+                                </div>
                             </center>
                         </div>
-                        <div class="intex">
+                        <div class="tablatext">
                             <div>
                                 <p>
                                     {{ $unit->descrip }}
                                 </p>
+                            </div><div>
+                                <br><center><a href="/ubicacion">seleccionar</a></center>
                             </div>
-                            <br>
-                            <a href="/ubicacion">seleccionar</a>
+                            
+                            
                         </div>
                     </div>
                 </div>
