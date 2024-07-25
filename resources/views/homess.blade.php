@@ -2,17 +2,22 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{-- <meta charset="UTF-8"> --}}
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script> --}}
+    {{-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('css/ocasion.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/Home.css') }}"><!-- llamado de la seccion de estilos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> --}}
+
+    {{--  --}}
     <!--llamado de libreria de iconos de redes sociales-->
     <link rel="shortcut icon" href="/img/LOGOS BLANCO Y NEGRO/BLANCO.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="http://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {{-- <link rel="stylesheet" href="http://unicons.iconscout.com/release/v4.0.0/css/line.css"> --}}
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
     <title>Inicio - I kan </title>
 </head>
 
@@ -351,10 +356,7 @@
 
         </div>
     </div>
-    <div class="regis">
-        <marquee>Registrate <button>Registrate Gratis</button></marquee>
-
-    </div>
+   
 
     <br><br><br><br>
 
@@ -489,14 +491,14 @@
     <div class="ulti">
         <li>Todos los derechos reservados 2024. I kan Colombia</li>
     </div> -->
-    <script src="/1.Home.js"></script>
+    {{-- <script src="/1.Home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <script></script>
+    <script></script> --}}
     {{-- <script src="/1.Home_login.js"></script> --}}
-    <script src="{{ asset('js/home_login.js') }}"></script>
-    <script src="{{ asset('js/1.contactos.js') }}"></script>
+    {{-- <script src="{{ asset('js/home_login.js') }}"></script>
+    <script src="{{ asset('js/1.contactos.js') }}"></script> --}}
     {{-- <script src="/1.contactos.js"></script> --}}
 </body>
 
