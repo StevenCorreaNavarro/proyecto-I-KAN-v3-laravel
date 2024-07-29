@@ -6,7 +6,9 @@ use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
+
 {
+    
     public function listar()
     {
         $usuarios = Usuario::orderBy('id', 'desc')->get();
@@ -134,4 +136,6 @@ class UsuarioController extends Controller
     {
         return view('ocasion_noche_de_fiesta');
     }
+    
+    
 }

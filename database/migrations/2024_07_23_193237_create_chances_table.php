@@ -15,8 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('ocasion');
 
-            
+            $table->unsignedBigInteger('session_id')->nullable();;
+            $table->foreign('session_id')
+                ->references('user_id')
+                ->on('sessions')
+                ->onDelete('cascade')
+                ->unUpdate('cascade');
 
+            
             $table->timestamps();
         });
     }

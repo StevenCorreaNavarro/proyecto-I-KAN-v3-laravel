@@ -12,4 +12,8 @@ class Chance extends Model
     {
         return $this->belongsToMany('App\Models\Style');
     }
+    public function usuarios()
+    {
+        return $this->hasMany(Usuario::class);
+    }
 }

@@ -6,6 +6,7 @@ use App\Models\Curso;
 use App\Models\Registro; 
 use App\Models\Store;              //crear esta parte 
 use App\Models\Usuario;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 
@@ -72,6 +73,21 @@ Route::put('curso/{curso}',[CursoController::class,'update'])->name('curso.updat
 Route::delete('curso/{curso}',[CursoController::class,'destroy'])->name('curso.destroy');
 
 Route::get('curso/{curso}/editar',[CursoController::class,'edit'])->name('curso.edit');   //actualizacion de datos
+
+use App\Http\Controllers\OccasionController;
+
+Route::get('/ocasiones', [ChanceController::class, 'index'])->name('occasions.index');
+Route::post('/occasions/select/{id}', [ChanceController::class, 'select'])->name('occasions.select');
+
+
+Route::get('/occasions', [ChanceController::class, 'index'])->name('occasions.index');
+Route::post('/occasions/select/{id}', [ChanceController::class, 'select'])->name('occasions.select');
+Route::get('/occasions/{id}', [ChanceController::class, 'show'])->name('occasions.show');
+
+
+
+
+
 
 // Route::get('/rutapepe',[ProductController::class,'f_pepe']);          // public function f_pepe() desde product controller
 // Route::get('/rutapepecarlos',[ProductController::class,'f_carlos']);  //rutapepecarlos  

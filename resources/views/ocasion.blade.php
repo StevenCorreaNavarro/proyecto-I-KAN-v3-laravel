@@ -16,6 +16,7 @@
 
     <script>
         let submenu = document.getElementById("submenu");
+
         function toggleMenu() {
             submenu.classList.toggle("open-menu");
         }
@@ -40,8 +41,8 @@
         <div class="slider">
             <figure>
                 <div class="slide">
-                    <a href="https://www.kancanjeanscolombia.com/nueva-coleccion"><img src="/img//IMG OCASIONES/carrusel2.jpg"
-                            alt="estilo1"></a>
+                    <a href="https://www.kancanjeanscolombia.com/nueva-coleccion"><img
+                            src="/img//IMG OCASIONES/carrusel2.jpg" alt="estilo1"></a>
                 </div>
                 <div class="slide">
                     <a href=""><img src="/img/IMG OCASIONES/carrusel.jpg" alt="estilo2"></a>
@@ -72,14 +73,17 @@
         <div class="texgr">
             <!-- <h1>Ocasiones</h1> -->
             <center>
-                
+                @yield('content')
                 <h3> !Nos vestimos para impresionar a los demás o para sentirnos cómodos y seguros en nuestra propia
                     piel !</h3>
             </center>
-
-
+        </div>
+        <div>
+             hola 
+        
         </div>
 
+        
 
 
         <div class="cuer">
@@ -91,6 +95,7 @@
                         <p> !lo que buscabas!
                         </p>
                         <br><br>
+
                         <button>
                             {{-- ******* esta es la ruta web de laravel **** --}}
                             <a href="salida_amigos">
@@ -112,7 +117,7 @@
                             <a href="boda">
                                 <h2> DESCUBRE</h2>
                             </a>
-                            
+
                         </button>
                     </center>
                 </div>
@@ -168,7 +173,7 @@
 
 
     </div>
-<br><br><br><br>
+    <br><br><br><br>
 
 
     <div class="regis">
